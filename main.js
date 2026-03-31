@@ -39,10 +39,22 @@ button.addEventListener("click", () => {
 
 //step 7
 const clearButton = document.getElementById("clearButton");
-
 clearButton.addEventListener("click", () => {
     input.value = "";
     output.textContent = "";
 });
 output.style.color = "";
 input.focus();
+
+//step 8
+const form = document.getElementById("userForm");
+const userNameInput = document.getElementById("username");
+const ageInput = document.getElementById("age");
+const result = document.getElementById("formResult");
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const name = userNameInput.value;
+    const age = ageInput.value;
+    result.textContent = `Имя: ${name}, Возраст: ${age}`;
+});
