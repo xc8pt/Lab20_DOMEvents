@@ -24,3 +24,15 @@ btn.addEventListener("click", () => {
     btn.style.backgroundColor = "#4CAF50";
     btn.style.color = "white";
 });
+
+//step 6
+const input = document.getElementById("nameInput");
+const button = document.getElementById("showName");
+const output = document.getElementById("output");
+button.addEventListener("click", () => {
+    if (input.value.trim() !== "") {
+    } else {
+        output.textContent = "Пожалуйста, введите имя!";
+        output.style.color = "red";
+    }
+});
